@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ihgo4uf2d-java-quarkus-gitops
+  description: This is GitOps manifest for ihgo4uf2d-java-quarkus   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=ihgo4uf2d-java-quarkus
+    backstage.io/kubernetes-id: ihgo4uf2d-java-quarkus 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: chetna14manku-org/ihgo4uf2d-java-quarkus-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:ihgo4uf2d-java-quarkus
